@@ -1,0 +1,357 @@
+:root{
+  ---navbar-height:60px;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(11,11,11);
+  /* margin-top:var(---navbar-height); */
+  background-image: url("./asfalt-light.png");
+  overflow-y:scroll;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar{
+  width:5px;
+}
+body::-webkit-scrollbar-track{
+  background:transparent;
+}
+body::-webkit-scrollbar-thumb {
+  background: rgb(207,27,27); /* Thumb gradient color */
+  border-radius: 6px;
+  border: none;
+}
+*{
+  box-sizing: border-box;
+  color:white !important;
+  font-weight: 600;
+}
+
+.opening{
+  width: 100%;
+  height:100vh;
+  background-color: rgb(31,31,31);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* navbar */
+.navbar{
+  background-color: rgb(31,31,31);
+  height:60px;
+  position: fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  padding:10px 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  /* overflow-x: hidden; */
+}
+.nav-list{
+  display: flex;
+  gap:30px;
+  margin-right: 30px;
+}
+.menu{
+  display: none;
+}
+.nav-list a{
+  /* color:white; */
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  transition: 0.05s ease-in-out;
+  padding:5px;
+  border-radius: 5px;
+}
+.navbar .nav-list div{
+  width:0;
+  height:2px;
+  background-color:rgb(207,27,27);
+  border-radius: 5px;
+  transition: 0.05s ease-in-out;
+}
+.navbar a:hover {
+  background-color: rgba(135, 134, 134,0.5);
+}
+.div-show{
+  width:100% !important;
+}
+@media(max-width:600px){
+  .nav-list{
+    position:absolute;
+    top:calc( 60px);
+    right:-200px;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(31,31,31);
+    padding:20px 40px;
+    transition: 0.5s ease-in-out;
+    margin-right: 0;
+  }
+  .navbar{
+    padding:10px 20px;
+  }
+  .menu{
+    display: block;
+  }
+  .show{
+    right:0px;
+  }
+}
+
+/* home */
+.home{
+  unicode-bidi: isolate;
+  width:100%;
+  height:calc(100vh );
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-evenly;
+  align-items: center;
+  padding:0 30px;
+  border-bottom: 1px solid rgb(135, 134, 134);
+}
+
+.home .heading h1{
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 80px;
+
+}
+.home .heading h1 span{
+  color:rgb(207,27,27) !important;
+}
+.home .social a{
+  margin:0 20px 0 0;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+}
+@media(max-width:850px){
+  .home{
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    padding-top:calc(60px) !important;
+  }
+  .home .heading h1{
+    font-size: 40px;
+    line-height: 60px;
+  }
+  .home img{
+    width:400px;
+  }
+}
+
+.about{ 
+  width: 100%;
+  height:calc(100vh);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:40px 30px 0px 30px;
+  padding-bottom: 15px;
+  /* background-image: url("./asfalt-light.png"); */
+  border-bottom: 1px solid rgb(135, 134, 134);
+}
+.about h2{
+  color:rgb(207,27,27) !important;
+  font-size: 35px;
+  font-weight: 600;
+  display: inline;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about h2 div{
+  width:80px;
+  height:3px;
+  border-radius: 5px;
+  background-color: rgb(207,27,27);
+}
+.about .content{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+  gap:20px;
+  height:fit-content;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.about .content .photo{
+  flex:1;
+  display: flex;
+  max-width: 1024px;
+  justify-content: center;
+}
+.about .content img{
+  width:300px;
+  height:max-content;
+  border-radius: 10px;
+}
+.about .content .text{
+  max-width: 700px;
+  min-width: 300px;
+  flex: 1;
+}
+.about .content .text h3{
+  font-size: 25px;
+  font-weight: 600;
+}
+.about .content .text p{
+  font-size: 16px;
+  line-height: 30px;
+}
+@media(max-width:850px){
+  .about{
+    height: fit-content;
+  }
+}
+.skills{
+  width:100%;
+  height: fit-content;
+  /* background-image: url("./asfalt-light.png"); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding:40px 30px; */
+  /* border-bottom: 1px solid rgb(135, 134, 134); */
+  border: none !important;
+  
+}
+.skills-list{
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-wrap: wrap;
+  gap:30px;
+  padding:0 40px;
+  flex-shrink: 1;
+}
+.skill{
+  max-width:500px;
+  min-width: 450px;
+  flex:1;
+}
+.skill h3{
+  text-align: center;
+  font-size: 1.4rem;
+  margin:0;
+  margin-top: 15px;
+  
+}
+.skills h3 div{
+  width:100%;
+  height:3px;
+  border-radius: 5px;
+  background-color: rgb(207,27,27);
+  margin-top: 10px;
+}
+@media(max-width:1080px){
+  .skills-list{
+    flex-direction: column;
+    align-items: center;
+    gap:0px;
+    width:100%;
+    flex-wrap: nowrap;
+  }
+  .skill h3{
+    width: 100%;
+  }
+  .skill{
+    /* max-width: 100%; */
+    max-width: 80%;
+    min-width:80%;
+  }
+}
+@media (max-width:550px){
+  .skills{
+    padding:40px 40px 0px 40px;
+  }
+  .skills-list{
+    padding:0px;
+  }
+  .skill{
+    min-width: 100%;
+  }
+}
+
+
+.projects{
+  border-bottom: 1px solid rgb(135, 134, 134) !important;
+}
+.projects-list{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap:30px;
+}
+
+.project h3{
+  text-align: center;
+  font-size: 1.4rem;
+}
+.project a{
+  overflow: hidden;
+  display: block;
+  border-radius: 10px;
+}
+.project img{
+  width:300px;
+  height:auto;
+  transition: 0.5s ease-in-out;
+}
+.project a img:hover{
+  transform: scale(1.3);
+}
+@media(max-width:650px){
+  .projects-list{
+    gap:0px;
+  }
+}
+.contact{
+  border: none !important;
+}
+.contact form{
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+}
+.contact form input, textarea{
+ color:black !important;
+ padding:15px 10px;
+ font-size: 1.1rem;
+ font-weight: 400;
+ border-radius: 5px;
+}
+.contact form input,  textarea:focus{
+  outline: none;
+}
+.footer{
+  margin-top:40px;
+  background-color: rgb(31,31,31);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:20px;
+}
+.footer p{
+  color:rgb(135, 134, 134) !important;
+}
+
