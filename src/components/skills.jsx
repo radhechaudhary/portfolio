@@ -1,9 +1,9 @@
 import React from 'react'
 import JavascriptIcon from '@mui/icons-material/Javascript';
 
-function Skills() {
+function Skills(props) {
   return (
-    <section className='skills about' id="skills">
+    <section className={` skills about ${!props.DarkTheme?"background-light":""}`} id="skills">
       <h2>
         Skills
         <div ></div>

@@ -1,9 +1,9 @@
 import React from 'react'
 import "aos/dist/aos.css";
 
-function Contact() {
+function Contact(props) {
   return (
-    <section className='skills about contact' id="contact">
+    <section className={`skills about contact ${!props.DarkTheme?"background-light":""}`} id="contact">
       <h2>
         Contact
         <div ></div>

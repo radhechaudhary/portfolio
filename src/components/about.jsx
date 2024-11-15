@@ -1,9 +1,9 @@
 import React from 'react'
 import img from './about-radhe.jpeg'
 
-function About() {
+function About(props) {
   return (
-    <section id="about" className="about">
+    <section id="about" className={`about ${!props.DarkTheme?"background-light":""}`}>
       <h2>
         About
         <div ></div>

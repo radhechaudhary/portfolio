@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./components/navbar";
 import Home from './components/home';
 import Aos from "aos";
@@ -11,18 +11,23 @@ import Contact from "./components/contact";
 import Footer from "./components/footer";
 
 function App() {
+
+  const [DarkTheme,  setTheme]=useState(true)
+  function toggleTheme(){
+    setTheme(!DarkTheme);
+  }
   React.useEffect(()=>{
     Aos.init({duration:500, once: false});
 },[])
   return (
     <div>
-      <Navbar/>
-      <Home/>
-      <About/>
-      <Skills/>
-      <Projects/>
-      <Contact/>
-      <Footer/>
+      <Navbar DarkTheme={DarkTheme} toggleTheme={toggleTheme}/>
+      <Home DarkTheme={DarkTheme} toggleTheme={toggleTheme}/>
+      <About DarkTheme={DarkTheme} toggleTheme={toggleTheme}/>
+      <Skills DarkTheme={DarkTheme} toggleTheme={toggleTheme}/>
+      <Projects DarkTheme={DarkTheme} toggleTheme={toggleTheme}/>
+      <Contact DarkTheme={DarkTheme} toggleTheme={toggleTheme}/>
+      <Footer DarkTheme={DarkTheme} toggleTheme={toggleTheme}/>
     </div>
   );
 }

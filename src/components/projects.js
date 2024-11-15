@@ -5,9 +5,9 @@ import regester from './regester-app.png'
 import "aos/dist/aos.css";
 
 
-function Projects() {
+function Projects(props) {
   return (
-    <section className='projects skills about' id="projects">
+    <section className={`projects skills about ${!props.DarkTheme?"background-light":""}`} id="projects">
         <h2>
         Projects
         <div ></div>

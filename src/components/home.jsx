@@ -5,10 +5,10 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import img from './radhe (2).png'
 import { Button } from '@mui/material';
 
-function Home() {
+function Home(props) {
   return (
     <section id="home">
-        <div className='home'>
+        <div className={`home ${!props.DarkTheme?"background-light":""}`}>
             <div className='content'>
             <div data-aos="fade-right" className='heading'>
                 <h1>Hi! <br/>I'm <span>Mohit</span><br/>Web Developer</h1>
@@ -16,9 +16,9 @@ function Home() {
             </div>
             
             <div data-aos="fade-right" className='social'>
-                <a href="https://www.instagram.com/radhe_chaudhary_2k4/"><InstagramIcon fontSize='large'/></a>
-                <a href=""><GitHubIcon fontSize='large'/></a>
-                <a href="https://www.linkedin.com/in/mohit-chaudhary-5a0002272/"><LinkedInIcon fontSize='large'/></a>
+                <a className={` ${!props.DarkTheme?"color-black":""}`} href="https://www.instagram.com/radhe_chaudhary_2k4/"><InstagramIcon fontSize='large'/></a>
+                <a className={` ${!props.DarkTheme?"color-black":""}`} href=""><GitHubIcon fontSize='large'/></a>
+                <a className={` ${!props.DarkTheme?"color-black":""}`} href="https://www.linkedin.com/in/mohit-chaudhary-5a0002272/"><LinkedInIcon fontSize='large'/></a>
             </div>
             </div>
             

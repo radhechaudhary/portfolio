@@ -26,11 +26,15 @@ body::-webkit-scrollbar-thumb {
 }
 *{
   box-sizing: border-box;
-  color:white !important;
+  /* color:white !important; */
   font-weight: 600;
+}
+a{
+  color:white;
 }
 
 .opening{
+  color:white;
   width: 100%;
   height:100vh;
   background-color: rgb(31,31,31);
@@ -55,6 +59,13 @@ body::-webkit-scrollbar-thumb {
   z-index: 1000;
   /* overflow-x: hidden; */
 }
+.navbar .items{
+  display: flex;
+  gap:20px;
+  justify-content: right;
+  align-items: center;
+}
+
 .nav-list{
   display: flex;
   gap:30px;
@@ -64,7 +75,7 @@ body::-webkit-scrollbar-thumb {
   display: none;
 }
 .nav-list a{
-  /* color:white; */
+  color:white;
   text-decoration: none;
   cursor: pointer;
   font-size: 1.2rem;
@@ -89,6 +100,39 @@ body::-webkit-scrollbar-thumb {
 .div-show{
   width:100% !important;
 }
+
+.navbar .items .theme-toggle{
+  width:40px;
+  height: 20px;
+  background-color: rgb(11,11,11);
+  background-image: url("./stardust.png");
+  background-size: contain;
+  border-radius: 50px;
+  padding:2px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  position: relative;
+}
+.navbar .items .theme-toggle .slider{
+  position: absolute;
+  width:16px;
+  height:16px;
+  /* background-color: white; */
+  border-radius: 100%;
+  transition:  0.3s ease-in-out;
+  background-image: url('./moon.jpg');
+  background-size: contain;
+  right:24px;
+}
+.button-light{
+  background-image: url("./fresh-snow.png") !important;
+  background-color: rgb(112, 183, 234) !important;
+}
+.slider-light{
+background-image: url("./sun2.png") !important;
+right:0px !important;
+
+}
 @media(max-width:600px){
   .nav-list{
     position:absolute;
@@ -106,6 +150,7 @@ body::-webkit-scrollbar-thumb {
   }
   .menu{
     display: block;
+    color:white;
   }
   .show{
     right:0px;
@@ -114,6 +159,7 @@ body::-webkit-scrollbar-thumb {
 
 /* home */
 .home{
+  color:white;
   unicode-bidi: isolate;
   width:100%;
   height:calc(100vh );
@@ -160,6 +206,7 @@ body::-webkit-scrollbar-thumb {
 
 .about{ 
   width: 100%;
+  color:white;
   /* height:calc(100vh); */
   display: flex;
   flex-direction: column;
@@ -232,6 +279,7 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   /* padding:40px 30px; */
   /* border-bottom: 1px solid rgb(135, 134, 134); */
+  color:white;
   border: none !important;
   
 }
@@ -327,6 +375,7 @@ body::-webkit-scrollbar-thumb {
 }
 .contact{
   border: none !important;
+  padding-bottom: 30px;
 }
 .contact form{
   width: 350px;
@@ -335,7 +384,6 @@ body::-webkit-scrollbar-thumb {
   gap:30px;
 }
 .contact form input, textarea{
- color:black !important;
  padding:15px 10px;
  font-size: 1.1rem;
  font-weight: 400;
@@ -345,7 +393,7 @@ body::-webkit-scrollbar-thumb {
   outline: none;
 }
 .footer{
-  margin-top:40px;
+  /* margin-top:40px; */
   background-color: rgb(31,31,31);
   display: flex;
   justify-content: center;
@@ -354,5 +402,18 @@ body::-webkit-scrollbar-thumb {
 }
 .footer p{
   color:rgb(135, 134, 134) !important;
+}
+
+
+.background-light{
+  background-color: white !important;
+  color:black !important;
+
+}
+.color-black{
+  color:black !important;
+}
+.border-bottom{
+  border-bottom: 1px solid rgb(135, 134, 134) !important;
 }
 
