@@ -28,6 +28,7 @@ body::-webkit-scrollbar-thumb {
   box-sizing: border-box;
   /* color:white !important; */
   font-weight: 600;
+  transition: background-color 0.3s ease-in-out;
 }
 a{
   color:white;
