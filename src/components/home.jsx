@@ -11,7 +11,7 @@ function Home(props) {
         <div className={`home ${!props.DarkTheme?"background-light":""}`}>
             <div className='content'>
             <div data-aos="fade-right" className='heading'>
-                <h1>Hi! <br/>I'm <span>Mohit</span><br/>Web Developer</h1>
+                <h1 className={` ${!props.DarkTheme?"color-black":""}`} >Hi! <br/>I'm <span>Mohit</span><br/>Web Developer</h1>
                 <Button href='#contact' sx={{backgroundColor:"rgba(207,27,27)"}}  variant="contained">Contact</Button>
             </div>
             

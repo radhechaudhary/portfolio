@@ -22,7 +22,6 @@ function App() {
     else{
       r.style.setProperty('--background-color', 'black');
     }
-    
     setTheme(!DarkTheme);
   }
   React.useEffect(()=>{
