@@ -14,6 +14,7 @@ function App() {
 
   const [DarkTheme,  setTheme]=useState(true)
   function toggleTheme(){
+    console.log(document.querySelector('body').style.backgroundColor)
     setTheme(!DarkTheme);
   }
   React.useEffect(()=>{

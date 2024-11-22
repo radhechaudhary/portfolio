@@ -28,7 +28,7 @@ function Navbar(props) {
             src={img}>
         </Avatar>
         <div className='items'>
-            <div className={`nav-list ${toggled?"show":""} ${!props.DarkTheme?"background-light ":""}`}>
+            <div className={`nav-list ${toggled?"show":""} ${!props.DarkTheme?"background-transparent ":""}`}>
                 <a className={` ${!props.DarkTheme?"color-black":""}`} onClick={()=>{togglenavbar(); setCurrSection('home');}} href="#home">Home <div className={` ${currSection==='home'?"div-show":""}`} ></div></a>
                 <a className={` ${!props.DarkTheme?"color-black":""}`} onClick={()=>{togglenavbar(); setCurrSection('about');}} href="#about">About <div  className={` ${currSection==='about'?"div-show":""}`} ></div></a>
                 <a className={` ${!props.DarkTheme?"color-black":""}`} onClick={()=>{togglenavbar(); setCurrSection('skills');}} href="#skills">Skills <div  className={` ${currSection==='skills'?"div-show":""}`} ></div></a>
