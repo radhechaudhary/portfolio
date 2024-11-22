@@ -14,6 +14,15 @@ function App() {
 
   const [DarkTheme,  setTheme]=useState(true)
   function toggleTheme(){
+    var r=document.querySelector(':root');
+    var rs = getComputedStyle(r);
+    if(rs.getPropertyValue('--background-color')==='black'){
+      r.style.setProperty('--background-color', 'white');
+    }
+    else{
+      r.style.setProperty('--background-color', 'black');
+    }
+    
     setTheme(!DarkTheme);
   }
   React.useEffect(()=>{
