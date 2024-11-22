@@ -17,7 +17,7 @@ function Home(props) {
             
             <div data-aos="fade-right" className='social'>
                 <a className={` ${!props.DarkTheme?"color-black":""}`} href="https://www.instagram.com/radhe_chaudhary_2k4/"><InstagramIcon fontSize='large'/></a>
-                <a className={` ${!props.DarkTheme?"color-black":""}`} href=""><GitHubIcon fontSize='large'/></a>
+                <a className={` ${!props.DarkTheme?"color-black":""}`} href="https://github.com/radhechaudhary"><GitHubIcon fontSize='large'/></a>
                 <a className={` ${!props.DarkTheme?"color-black":""}`} href="https://www.linkedin.com/in/mohit-chaudhary-5a0002272/"><LinkedInIcon fontSize='large'/></a>
             </div>
             </div>
