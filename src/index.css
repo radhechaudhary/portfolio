@@ -1,6 +1,5 @@
 :root{
   ---navbar-height:60px;
-  --background-color:black;
 }
 html {
   scroll-behavior: smooth;
@@ -8,11 +7,10 @@ html {
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background-color: var(--background-color);
+  background-color: black;
   transition: 0.3s ease-in-out;
-  /* margin-top:var(---navbar-height); */
   background-image: url("./asfalt-light.png");
-  overflow-y:scroll;
+  /* overflow-y:scroll; */
   overflow-x: hidden;
 }
 body::-webkit-scrollbar{
@@ -25,6 +23,11 @@ body::-webkit-scrollbar-thumb {
   background: rgb(207,27,27); 
   border-radius: 6px;
   border: none;
+}
+@media(max-width:500px){
+  body::-webkit-scrollbar{
+    width:2px;
+  }
 }
 
 *{

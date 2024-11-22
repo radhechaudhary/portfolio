@@ -36,7 +36,7 @@ function Navbar(props) {
                 <a className={` ${!props.DarkTheme?"color-black":""}`} onClick={()=>{togglenavbar(); setCurrSection('contact');}} href="#contact">Contact <div  className={` ${currSection==='contact'?"div-show":""}`} ></div></a>
             </div>
             <div className={`menu ${!props.DarkTheme?"color-black":""}`} onClick={togglenavbar}><MenuOpenIcon/></div>
-            <div ref={buttonRef} onClick={(e)=>{props.toggleTheme(); clicked(e)}} className={`theme-toggle ${!props.DarkTheme?"button-light":""}`}>
+            <div ref={buttonRef} onClick={props.toggleTheme} className={`theme-toggle ${!props.DarkTheme?"button-light":""}`}>
               <div ref={sliderRef}  className={`slider ${!props.DarkTheme?"slider-light":''}`}></div>
             </div>
         </div>
