@@ -1,9 +1,7 @@
 import React, { useRef, useState } from 'react'
 import Avatar from '@mui/material/Avatar';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
-import img from './IMG-20240325-WA0006.jpg'
-import clouds from './fresh-snow.png'
-import moon from './moon.jpg'
+import img from './radhe (2).png'
 
 
 function Navbar(props) {
