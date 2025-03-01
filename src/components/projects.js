@@ -3,6 +3,7 @@ import slider from './slider.png'
 import keeper from './keeper-app.png'
 import regester from './register-app.png'
 import chat from './chatpage.png'
+import Ai from './Ai.png'
 import "aos/dist/aos.css";
 
 
@@ -25,6 +26,10 @@ function Projects(props) {
         <div className='project' data-aos="fade-down" data-aos-easing="linear" data-aos-delay="300">
             <a href="https://chat-app-frontend-two-gold.vercel.app/"><img src={chat} /></a>
             <h3>Let's Chat</h3>
+        </div>
+        <div className='project' data-aos="fade-down" data-aos-easing="linear" data-aos-delay="300">
+            <a href="https://ai-assistant-nine-bice.vercel.app/"><img src={Ai} /></a>
+            <h3>Ai Assistant</h3>
         </div>
       </div>
     </section>
