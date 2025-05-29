@@ -1,13 +1,13 @@
 import {useEffect, useRef} from 'react'
 import EBS from './assests/EBS.png'
-import register from './register-app.png'
+import Hotelier from './Hotelier.png'
 import chat from './chatpage.png'
 import Ai from './Ai.png'
 import {motion, useAnimation, useInView} from 'framer-motion'
 
 function Projects(props) {
   const projects=[
-    {name:'hotel-management', photo:register, link:" https://regester-app-frontend.vercel.app/", description:"This is the full stack System for managing hotels"},
+    {name:'Hotelier', photo:Hotelier, link:" https://github.com/radhechaudhary/Hotelier.git", description:"An ultimate System for managing hotels"},
     {name:'Ai Assistant', photo:Ai, link:"https://ai-assistant-nine-bice.vercel.app/", description:"This a vocal Ai assistant using google gemini"},
     {name:'Chat', photo:chat, link:"https://chat-app-frontend-two-gold.vercel.app/login", description:"Full fledge two tier messaging web application"},
     {name:'Electricity Billing System', photo:EBS, link:"", description:"semi automated billing system for electricity consumers"}
