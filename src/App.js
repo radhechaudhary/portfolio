@@ -10,6 +10,7 @@ import Projects from "./components/projects";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
 import { AnimatePresence, motion } from "framer-motion";
+import img from './radhe (2).png'
 
 function App() {
 
@@ -19,8 +20,21 @@ function App() {
     setTheme(!DarkTheme);
   }
   React.useEffect(()=>{
-    Aos.init({duration:500, once: false});
-},[])
+    const preloadImages = (imageUrls) => {
+      imageUrls.forEach((url) => {
+        const img = new Image();
+        img.src = url;
+      });
+    };
+
+    // Example usage:
+    preloadImages([
+      img,
+      './sun2.svg',
+      './moon.svg'
+    ]);
+  },[])
+
 const [opening, setOpening]= useState(true)
 useEffect(()=>{
   const timeOut=setTimeout(()=>{
