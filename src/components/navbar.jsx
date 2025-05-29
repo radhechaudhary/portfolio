@@ -24,11 +24,11 @@ function Navbar(props) {
         </Avatar>
         <div className='items'>
             <div className={`nav-list ${toggled?"show":""} ${!props.DarkTheme?"background-light ":""}`}>
-                <a className={` ${!props.DarkTheme?"color-black":""}`} onClick={()=>{togglenavbar(); setCurrSection('home');}} href="#home">Home <motion.div layoutId='underline' className={` ${currSection==='home'?"div-show":""}`} ></motion.div></a>
-                <a className={` ${!props.DarkTheme?"color-black":""}`} onClick={()=>{togglenavbar(); setCurrSection('about');}} href="#about">About <motion.div layoutId='underline' className={` ${currSection==='about'?"div-show":""}`} ></motion.div></a>
-                <a className={` ${!props.DarkTheme?"color-black":""}`} onClick={()=>{togglenavbar(); setCurrSection('skills');}} href="#skills">Skills <motion.div layoutId='underline' className={` ${currSection==='skills'?"div-show":""}`} ></motion.div></a>
-                <a className={` ${!props.DarkTheme?"color-black":""}`} onClick={()=>{togglenavbar(); setCurrSection('projects');}} href="#projects">Projects <motion.div layoutId='underline' className={` ${currSection==='projects'?"div-show":""}`} ></motion.div></a>
-                <a className={` ${!props.DarkTheme?"color-black":""}`} onClick={()=>{togglenavbar(); setCurrSection('contact');}} href="#contact">Contact <motion.div layoutId='underline' className={` ${currSection==='contact'?"div-show":""}`} ></motion.div></a>
+                <a className={` ${!props.DarkTheme?"color-black":""}`} onClick={()=>{togglenavbar(); setCurrSection('home');}} href="#home">Home {currSection==='home'?<motion.div className='nav-underline' layoutId='underline' ></motion.div>:<div></div>}</a>
+                <a className={` ${!props.DarkTheme?"color-black":""}`} onClick={()=>{togglenavbar(); setCurrSection('about');}} href="#about">About {currSection==='about'?<motion.div className='nav-underline' layoutId='underline'  ></motion.div>:<div></div>}</a>
+                <a className={` ${!props.DarkTheme?"color-black":""}`} onClick={()=>{togglenavbar(); setCurrSection('skills');}} href="#skills">Skills {currSection==='skills'?<motion.div className='nav-underline' layoutId='underline' ></motion.div>:<div></div>}</a>
+                <a className={` ${!props.DarkTheme?"color-black":""}`} onClick={()=>{togglenavbar(); setCurrSection('projects');}} href="#projects">Projects {currSection==='projects'?<motion.div className='nav-underline' layoutId='underline'  ></motion.div>:<div></div>}</a>
+                <a className={` ${!props.DarkTheme?"color-black":""}`} onClick={()=>{togglenavbar(); setCurrSection('contact');}} href="#contact">Contact {currSection==='contact'?<motion.div className='nav-underline' layoutId='underline' ></motion.div>:<div></div>}</a>
             </div>
             <div className={`menu ${!props.DarkTheme?"color-black":""}`} onClick={togglenavbar}><MenuOpenIcon/></div>
             <div ref={buttonRef} onClick={props.toggleTheme} className={`theme-toggle ${!props.DarkTheme?"button-light":""}`}>
